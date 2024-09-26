@@ -7,20 +7,14 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #c5c5c5;
+    color: #333;
     padding: 20px;
     text-align: center;
 }
 
-/* header img {
-    width: 100px;
-    display: block;
-    margin: 0 auto;
-} */
-
 #logo {
-    width: 100px;
+    width: 20%;
     display: block;
     margin: 0 auto;
 }
@@ -36,20 +30,53 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+    color: rgb(64, 64, 64);
+    text-decoration: underline
 }
 
 footer {
-    background-color: #333;
+    background-color: #c5c5c5;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
+    padding: 5px;
+    position: relative;
     width: 100%;
-    bottom: 0;
+    bottom:2;
 }
+
+.social-icons {
+    display: inline;
+    flex-direction: row; 
+    align-items: center; 
+}
+footer img {
+    width: 2%; 
+    height: 2%; 
+    margin: 5px 0; 
+}
+
+
 
 main {
     padding: 20px;
+}
+
+.container {
+    display: flex; /* Usamos flex para alinear la sidebar y el contenido */
+}
+
+
+.sidebar {
+    width: 250px; /* Ajusta el ancho de la sidebar */
+    background-color: f4f4f4;
+    padding: 8px;
+    position: fixed; /* Mantiene la sidebar fija en la pantalla */
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+.content {
+    background-color: white;
+    margin-left: 270px; /* Deja espacio para la sidebar */
+    padding: 20px; /* Espaciado en el contenido */
+    flex-grow: 1; /* Permite que el contenido use el espacio restante */
 }
