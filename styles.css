@@ -65,18 +65,42 @@ main {
     display: flex; /* Usamos flex para alinear la sidebar y el contenido */
 }
 
-
 .sidebar {
-    width: 250px; /* Ajusta el ancho de la sidebar */
-    background-color: f4f4f4;
-    padding: 8px;
-    position: fixed; /* Mantiene la sidebar fija en la pantalla */
+    width: 400px;
+    background-color: #f4f4f4; /* Añadido un # para el color */
+    padding: 50px;
+    position: sticky; /* Cambiado a sticky */
+    top: 0; /* Se mantendrá pegada a la parte superior al hacer scroll */
     height: 100vh; /* Altura completa de la ventana */
+    overflow-y: initial; /* Permite hacer scroll en la sidebar si es necesario */
 }
-
 .content {
     background-color: white;
-    margin-left: 270px; /* Deja espacio para la sidebar */
-    padding: 20px; /* Espaciado en el contenido */
-    flex-grow: 1; /* Permite que el contenido use el espacio restante */
+    margin-left: 100px; /* Deja espacio para la sidebar */
+    margin-right: 50px;
+    padding: 40px; /* Espaciado en el contenido */
+    text-align: justify;
+}
+
+.tablasDiscos h4 {
+    margin-bottom: 5px; /* Reduce el espacio debajo de los h4 */
+}
+
+.tablasDiscos table {
+    margin-top: 0; /* Elimina el espacio encima de las tablas */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
 }
