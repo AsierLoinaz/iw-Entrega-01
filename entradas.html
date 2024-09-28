@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="Extremoduro" content="width=device-width, initial-scale=1.0">
-    <title>Comprar Entradas</title>
+    <title>Extremoduro - Comprar Entradas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,8 +19,188 @@
             </ul>
         </nav>
     </header>
-    <h1>Comprar Entradas</h1>
+
     <form action="server"></form>
-    
+
+    <div class="f_container">
+        <h1>Compra tus Entradas</h1>
+
+        <!-- CADA PAR ETIQUETA-INPUT SERÁ UN GRUPO-FORM -->
+
+        <form action="submit" method="post">
+
+
+            <fieldset>
+                <legend>Entradas</legend>
+                <div class="grupo-form">
+                    <label for="entradasPista">Entradas en Pista*:</label>
+                    <select id="entradasPista" name="entradasPista">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                
+
+                
+                <div class="grupo-form">
+                    <label for="entradasGrada">Entradas en Grada*:</label>
+                    <select id="entradasGrada" name="entradasGrada">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                
+                <div class="grupo-form">
+                    <label for="conciertos">Selecciona el concierto al que quieres asistir:</label>
+                    <select id="conciertos" name="conciertos" required>
+                        <optgroup label="Madrid">
+                            <option selected>MAD - 24 de Septiembre (2024)</option>
+                            <option>MAD - 1 de Octubre (2024)</option>
+                        </optgroup>
+                        <optgroup label="Barcelona">
+                            <option>BCN - 3 de Octubre (2024)</option>
+                            <option>BCN - 10 de Octubre (2024)</option>
+                            <option>BCN - 12 de Octubre (2024)</option>
+                        </optgroup>
+                        <optgroup label="Sevilla">
+                            <option>SEV - 5 de Octubre (2024)</option>
+                        </optgroup>
+                        <optgroup label="Valencia">
+                            <option>VLC - 12 de Octubre (2024)</option>
+                            <option>VLC - 15 de Octubre (2024)</option>
+                        </optgroup>
+                        <optgroup label="Bilbao">
+                            <option>BIL - 20 de Octubre (2024)</option>
+                            <option>BIL - 22 de Octubre (2024)</option>
+                            <option>BIL - 27 de Octubre (2024)</option>
+                        </optgroup>
+                        <optgroup label="Málaga">
+                            <option>MAL - 29 de Octubre (2024)</option>
+                        </optgroup>
+                        <optgroup label="Granada">
+                            <option>GRN - 30 de Octubre (2024)</option>
+                        </optgroup>
+                        <optgroup label="Vigo">
+                            <option>VIG - 5 de Noviembre (2024)</option>
+                        </optgroup>
+                        <optgroup label="Zaragoza">
+                            <option>ZRG - 8 de Noviembre (2024)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+
+
+
+            </fieldset>
+
+            <!-- Datos personales -->
+
+            <fieldset>
+            <legend>Datos personales del COMPRADOR</legend>
+            <!-- Nombre -->
+            <div class="grupo-form">
+                <label for="nombre">Nombre*:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+                
+            <!-- Apellido 1 -->
+            <div class="grupo-form">
+                <label for="apellido1">Primer apellido*:</label>
+                <input type="text" id="apellido1" name="apellido1" required>
+            </div>
+            <!-- Apellido 2 (no obligatorio) -->
+            <div class="grupo-form">
+                <label for="apellido2">Segundo apellido:</label>
+                <input type="text" id="apellido2">
+            </div>
+
+            <!-- Fecha de Nacimiento -->
+            <div class="grupo-form">
+                <label for="fecha-nacimiento">Fecha de Nacimiento*:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+            </div>
+
+            <div class="grupo-form">
+                <label for="CP">Código Postal*:</label>
+                <input type="number" id="CP" name="CP" required>
+
+            </div>
+
+            <!-- Email -->
+            <div class="grupo-form">
+                <label for="email">E-mail*:</label>
+                <input type="email" id="email" name="email" required placeholder="ejemplo@email.es">
+            </div>
+            <div class="grupo-form">
+                <label for="confEmail">Confirmar el e-mail*:</label>
+                <input type="email" id="confEmail" name="confEmail" required>
+            </div>
+
+            <!-- DNI -->
+            <div class="grupo-form">
+                <label for="dni">DNI*:</label>
+                <input type="text" id="dni" name="dni" required>
+            </div>
+
+            <!-- TELEFONO -->
+             <div class="grupo-form">
+                <label for="tlf">Teléfono*:</label>
+                <label class="prefijo">+34</label>
+                <input type="tel" name="tlf"  id="tlf" required>
+             </div>
+
+             <div class="grupo-form">
+                <label for="hayMayores">Entre los asistentes al concierto hay:*</label>
+                <div class="opciones-edad">
+                    <label>
+                        <input type="radio" id="hayMayores" name="grupo-edad" value="mayor" required> Solo personas mayores de edad (+18 años)
+                    </label>
+                    <label>
+                        <input type="radio" name="grupo-edad" value="menores"> Solo personas menores de edad
+                    </label>
+                    <label>
+                        <input type="radio" name="grupo-edad" value="MayoresYmenores"> Menores de edad acompañados de algún mayor
+                    </label>
+                </div>
+                <div>
+                    <p>* Campo obligatorio</p>
+                    <p> El COMPRADOR será el único que reciba las entradas en PDF por email. Aunque se incluyan datos de asistentes, éstos no recibirán PDF, puesto que el propietario es el titular de la compra.</p>
+                </div>
+            </div>
+            </fieldset>
+
+            <!-- Método de Pago -->
+            <div class="grupo-form">
+                <label for="metodo-pago">Método de Pago*:</label>
+                <select id="metodo-pago" name="metodo-pago" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                </select>
+            </div>
+
+            <div class="grupo-form-checkbox">
+                <input type="checkbox" id="publi" name="publi" >
+                <label for="publi">Deseo recibir publicidad del organizador y saber todo sobre sus eventos</label>
+
+                <input type="checkbox" id="aceptar-condiciones" name="aceptar-condiciones" required>
+                <label for="aceptar-condiciones">He leído y acepto los términos y condiciones</label>
+            </div>
+
+            <!-- Botón Enviar -->
+            <button type="submit">Comprar Entradas</button>
+        </form>
+    </div>
 </body>
 </html>
