@@ -24,17 +24,17 @@
 
     <div class="f_container">
         <h1>Compra tus Entradas</h1>
+        <p>* Campo obligatorio</p>
 
         <!-- CADA PAR ETIQUETA-INPUT SERÁ UN GRUPO-FORM -->
 
         <form action="submit" method="post">
-
-
             <fieldset>
                 <legend>Entradas</legend>
                 <div class="grupo-form">
                     <label for="entradasPista">Entradas en Pista*:</label>
                     <select id="entradasPista" name="entradasPista">
+                        <option value="0">0</option>
                         <option value="1" selected>1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -43,8 +43,6 @@
                         <option value="6">6</option>
                     </select>
                 </div>
-                
-
                 
                 <div class="grupo-form">
                     <label for="entradasGrada">Entradas en Grada*:</label>
@@ -62,8 +60,9 @@
                 <div class="grupo-form">
                     <label for="conciertos">Selecciona el concierto al que quieres asistir:</label>
                     <select id="conciertos" name="conciertos" required>
+                        <option value="" disabled selected>Selecciona un concierto...</option> <!-- Opción predeterminada -->
                         <optgroup label="Madrid">
-                            <option selected>MAD - 24 de Septiembre (2024)</option>
+                            <option>MAD - 24 de Septiembre (2024)</option>
                             <option>MAD - 1 de Octubre (2024)</option>
                         </optgroup>
                         <optgroup label="Barcelona">
@@ -98,15 +97,18 @@
                     </select>
                 </div>
                 
-
-
-
             </fieldset>
 
             <!-- Datos personales -->
 
             <fieldset>
             <legend>Datos personales del COMPRADOR</legend>
+
+            <div> 
+                <p> El COMPRADOR será el único que reciba las entradas en PDF por email. Aunque se incluyan datos de asistentes, éstos no recibirán PDF, puesto que el propietario es el titular de la compra.</p>
+            </div>
+
+            <fieldset>
             <!-- Nombre -->
             <div class="grupo-form">
                 <label for="nombre">Nombre*:</label>
@@ -129,13 +131,12 @@
                 <label for="fecha-nacimiento">Fecha de Nacimiento*:</label>
                 <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
             </div>
-
+            <!-- CP -->
             <div class="grupo-form">
                 <label for="CP">Código Postal*:</label>
                 <input type="number" id="CP" name="CP" required>
 
             </div>
-
             <!-- Email -->
             <div class="grupo-form">
                 <label for="email">E-mail*:</label>
@@ -145,21 +146,21 @@
                 <label for="confEmail">Confirmar el e-mail*:</label>
                 <input type="email" id="confEmail" name="confEmail" required>
             </div>
-
             <!-- DNI -->
             <div class="grupo-form">
                 <label for="dni">DNI*:</label>
                 <input type="text" id="dni" name="dni" required>
             </div>
-
             <!-- TELEFONO -->
              <div class="grupo-form">
                 <label for="tlf">Teléfono*:</label>
                 <label class="prefijo">+34</label>
                 <input type="tel" name="tlf"  id="tlf" required>
              </div>
-
-             <div class="grupo-form">
+            </fieldset>
+            <!-- HAY MENORES? -->
+            <div class="grupo-form">
+                
                 <label for="hayMayores">Entre los asistentes al concierto hay:*</label>
                 <div class="opciones-edad">
                     <label>
@@ -172,12 +173,9 @@
                         <input type="radio" name="grupo-edad" value="MayoresYmenores"> Menores de edad acompañados de algún mayor
                     </label>
                 </div>
-                <div>
-                    <p>* Campo obligatorio</p>
-                    <p> El COMPRADOR será el único que reciba las entradas en PDF por email. Aunque se incluyan datos de asistentes, éstos no recibirán PDF, puesto que el propietario es el titular de la compra.</p>
-                </div>
+                
             </div>
-            </fieldset>
+        </fieldset>
 
             <!-- Método de Pago -->
             <div class="grupo-form">
@@ -190,6 +188,11 @@
                 </select>
             </div>
 
+            <div class="grupo-form">
+                <label for="codigo-promocional">Código Promocional:</label>
+                <input type="text" id="codigo-promocional" name="codigo-promocional" placeholder="XXXX-XXXX">
+            </div>
+
             <div class="grupo-form-checkbox">
                 <input type="checkbox" id="publi" name="publi" >
                 <label for="publi">Deseo recibir publicidad del organizador y saber todo sobre sus eventos</label>
@@ -198,9 +201,26 @@
                 <label for="aceptar-condiciones">He leído y acepto los términos y condiciones</label>
             </div>
 
+
+            <div class="grupo-form">
+                <label for="comentarios">Observaciones o Comentarios:</label>
+                <textarea id="comentarios" name="comentarios"  placeholder="¿Alguna observación importante para tu compra?"></textarea>
+            </div>
+            
+
             <!-- Botón Enviar -->
             <button type="submit">Comprar Entradas</button>
         </form>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Extremoduro. Todos los derechos reservados.</p> 
+        <div class="social-icons">
+            <a href="https://open.spotify.com/intl-es/artist/3bgsNtcf5d5h9jbQbohfBK"><img src="images/spotify.png" alt="Spotify"></a>
+            <a href="https://www.youtube.com/channel/UCvsV6MkNhe7nW-3XW-dMzOA"><img src="images/yt.png" alt="YouTube"></a>
+            <a href="https://x.com/Oficina_Extremo"><img src="images/x.png" alt="X"> </a>   
+        </div>
+        
+    </footer>
 </body>
 </html>
