@@ -41,7 +41,8 @@ footer {
     padding: 5px;
     position: relative;
     width: 100%;
-    bottom:2;
+    bottom:2px;
+    top: 50px;
 }
 
 .social-icons {
@@ -82,7 +83,7 @@ main {
     text-align: justify;
 }
 
-.infoDisco {
+.content .infoDisco {
     display: flex; /* alinear imagen y texto en una fila */
     align-items: center; /* alinear vertical texto y foto */
     margin-bottom: 20px;
@@ -103,9 +104,9 @@ main {
     margin-bottom: 5px; 
 }
 
-.tablasDiscos table {
+.content .tablasDiscos table {
     table-layout: fixed; /* Ancho de columna fijo */
-    width: 54%; /* Ancho de tablas */
+    width: 56%; /* Ancho de tablas */
     border-collapse: collapse; /* Sin espacio entre celdas*/
     text-align: left; 
 }
