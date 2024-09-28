@@ -52,7 +52,7 @@ footer {
 footer img {
     width: 2%; 
     height: 2%; 
-    margin: 5px 0; 
+    margin: 2px; 
 }
 
 
@@ -62,45 +62,57 @@ main {
 }
 
 .container {
-    display: flex; /* Usamos flex para alinear la sidebar y el contenido */
+    display: flex; /* Alinear la sidebar y el contenido */
 }
 
 .sidebar {
     width: 400px;
-    background-color: #f4f4f4; /* Añadido un # para el color */
+    background-color: #f4f4f4; 
     padding: 50px;
-    position: sticky; /* Cambiado a sticky */
+    position: sticky; 
     top: 0; /* Se mantendrá pegada a la parte superior al hacer scroll */
     height: 100vh; /* Altura completa de la ventana */
-    overflow-y: initial; /* Permite hacer scroll en la sidebar si es necesario */
+    overflow-y: initial; /* Puedes hacer scroll en la sidebar  */
 }
 .content {
     background-color: white;
     margin-left: 100px; /* Deja espacio para la sidebar */
     margin-right: 50px;
-    padding: 40px; /* Espaciado en el contenido */
+    padding: 40px; 
+    text-align: justify;
+}
+
+.infoDisco {
+    display: flex; /* alinear imagen y texto en una fila */
+    align-items: center; /* alinear vertical texto y foto */
+    margin-bottom: 20px;
+}
+
+.infoDisco img {
+    width: 400px; 
+    height: 400px;
+    margin-right: 20px; 
+}
+
+.textoDisco p{
+    padding-right: 60%;
     text-align: justify;
 }
 
 .tablasDiscos h4 {
-    margin-bottom: 5px; /* Reduce el espacio debajo de los h4 */
+    margin-bottom: 5px; 
 }
 
 .tablasDiscos table {
-    margin-top: 0; /* Elimina el espacio encima de las tablas */
+    table-layout: fixed; /* Ancho de columna fijo */
+    width: 54%; /* Ancho de tablas */
+    border-collapse: collapse; /* Sin espacio entre celdas*/
+    text-align: left; 
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table th, table td {
+.tablasDiscos th, table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
 
-table th {
-    background-color: #f4f4f4;
-}
