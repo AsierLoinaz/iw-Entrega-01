@@ -75,6 +75,10 @@ main {
     height: 100vh; /* Altura completa de la ventana */
     overflow-y: initial; /* Puedes hacer scroll en la sidebar  */
 }
+
+
+
+
 .content {
     background-color: white;
     margin-left: 100px; /* Deja espacio para la sidebar */
@@ -96,7 +100,7 @@ main {
 }
 
 .textoDisco p{
-    padding-right: 60%;
+    padding-right: 20%;
     text-align: justify;
 }
 
@@ -106,7 +110,7 @@ main {
 
 .content .tablasDiscos table {
     table-layout: fixed; /* Ancho de columna fijo */
-    width: 56%; /* Ancho de tablas */
+    width: 88%; /* Ancho de tablas */
     border-collapse: collapse; /* Sin espacio entre celdas*/
     text-align: left; 
 }
