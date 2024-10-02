@@ -57,17 +57,13 @@ footer img {
 }
 
 
-
-main {
-    padding: 20px;
-}
-
 .container {
     display: flex; /* Alinear la sidebar y el contenido */
+    margin-top: 20px;
 }
 
 .sidebar {
-    width: 400px;
+    width: 200px;
     background-color: #f4f4f4; 
     padding: 50px;
     position: sticky; 
@@ -76,16 +72,17 @@ main {
     overflow-y: initial; /* Puedes hacer scroll en la sidebar  */
 }
 
-
-
-
 .content {
+    border-radius: 12px;
+    margin-top: 0px;
     background-color: white;
     margin-left: 100px; /* Deja espacio para la sidebar */
     margin-right: 50px;
     padding: 40px; 
     text-align: justify;
 }
+
+
 
 .content .infoDisco {
     display: flex; /* alinear imagen y texto en una fila */
@@ -120,4 +117,98 @@ main {
     padding: 8px;
     text-align: left;
 }
+
+
+
+/* FORMULARIO */
+
+form fieldset{
+    border-radius: 10px;
+}
+
+legend {
+    text-align: center; /* Centra el texto dentro del legend */
+    font-weight: bold; /* Si quieres que el texto de la legend sea más destacado */
+}
+
+form .f_sect{
+    margin-bottom: 50px;
+}
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Estilos de los inputs, selects y textarea */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+select {
+
+    appearance: none;
+    background-color: #fff;
+}
+
+/* Estilos de los radio buttons */
+.opciones-edad {
+    display: flex;
+    flex-direction: column;
+}
+
+.opciones-edad label {
+    font-weight: normal;
+}
+
+/* Estilos para botones */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+.telefono {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.telefono label{
+    padding-right: 20px;
+}
+.grupo-form-checkbox {
+    display: flex;
+    flex-direction: column; /* Coloca los checkbox-item en columna */
+    gap: 20px; /* Espacio entre cada checkbox-item */
+    margin-bottom: 30px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el checkbox y el label */
+    gap: 10px;
+}
+
 

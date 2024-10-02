@@ -22,41 +22,25 @@
 
     <form action="server"></form>
 
-    <div class="f_container">
-        <h1>Compra tus Entradas</h1>
-        <p>* Campo obligatorio</p>
+    <div class="container">
+        <aside class="sidebar" id="DiscosIndice">
+            <h2>Índice</h2>
+            <ul>
+            <li><a href="#entradas">Entradas</a></li>
+            <li><a href="#comprador">Datos del comprador</a></li>
+            <li><a href="#pago">Información del pago</a></li>
+            </ul>
+        </aside>
+        
 
         <!-- CADA PAR ETIQUETA-INPUT SERÁ UN GRUPO-FORM -->
 
-        <form action="submit" method="post">
+        <form action="submit" method="post" class="content">
+            <h1>Compra tus Entradas</h1>
+            <div id="entradas" class="f_sect">
+            <p>* Campo obligatorio</p>
             <fieldset>
-                <legend>Entradas</legend>
-                <div class="grupo-form">
-                    <label for="entradasPista">Entradas en Pista*:</label>
-                    <select id="entradasPista" name="entradasPista">
-                        <option value="0">0</option>
-                        <option value="1" selected>1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
-                </div>
-                
-                <div class="grupo-form">
-                    <label for="entradasGrada">Entradas en Grada*:</label>
-                    <select id="entradasGrada" name="entradasGrada">
-                        <option value="0" selected>0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
-                </div>
-                
+                <legend>Información de las entradas</legend>
                 <div class="grupo-form">
                     <label for="conciertos">Selecciona el concierto al que quieres asistir:</label>
                     <select id="conciertos" name="conciertos" required>
@@ -96,11 +80,39 @@
                         </optgroup>
                     </select>
                 </div>
+                <div class="grupo-form">
+                    <label for="entradasPista">Entradas en Pista*:</label>
+                    <select id="entradasPista" name="entradasPista">
+                        <option value="0">0</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                
+                <div class="grupo-form">
+                    <label for="entradasGrada">Entradas en Grada*:</label>
+                    <select id="entradasGrada" name="entradasGrada">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                
                 
             </fieldset>
+            </div>
+           
 
             <!-- Datos personales -->
-
+            <div id="comprador" class="f_sect">
             <fieldset>
             <legend>Datos personales del COMPRADOR</legend>
 
@@ -108,7 +120,6 @@
                 <p> El COMPRADOR será el único que reciba las entradas en PDF por email. Aunque se incluyan datos de asistentes, éstos no recibirán PDF, puesto que el propietario es el titular de la compra.</p>
             </div>
 
-            <fieldset>
             <!-- Nombre -->
             <div class="grupo-form">
                 <label for="nombre">Nombre*:</label>
@@ -154,12 +165,14 @@
             <!-- TELEFONO -->
              <div class="grupo-form">
                 <label for="tlf">Teléfono*:</label>
-                <label class="prefijo">+34</label>
-                <input type="tel" name="tlf"  id="tlf" required>
+                <div class="telefono">
+                 <label class="prefijo">+34</label>
+                <input type="tel" name="tlf"  id="tlf" required>   
+                </div>
+                
              </div>
-            </fieldset>
             <!-- HAY MENORES? -->
-            <div class="grupo-form">
+            <div class="f_sect">
                 
                 <label for="hayMayores">Entre los asistentes al concierto hay:*</label>
                 <div class="opciones-edad">
@@ -176,7 +189,10 @@
                 
             </div>
         </fieldset>
-
+    </div>
+            <div id="pago" class="f_sect">
+            <fieldset>
+            <legend>Información del pago</legend>
             <!-- Método de Pago -->
             <div class="grupo-form">
                 <label for="metodo-pago">Método de Pago*:</label>
@@ -192,14 +208,19 @@
                 <label for="codigo-promocional">Código Promocional:</label>
                 <input type="text" id="codigo-promocional" name="codigo-promocional" placeholder="XXXX-XXXX">
             </div>
-
-            <div class="grupo-form-checkbox">
-                <input type="checkbox" id="publi" name="publi" >
+        </fieldset>
+        </div>
+        <div class="grupo-form-checkbox">
+            <div class="checkbox-item">
                 <label for="publi">Deseo recibir publicidad del organizador y saber todo sobre sus eventos</label>
-
-                <input type="checkbox" id="aceptar-condiciones" name="aceptar-condiciones" required>
-                <label for="aceptar-condiciones">He leído y acepto los términos y condiciones</label>
+                <input type="checkbox" id="publi" name="publi">
             </div>
+        
+            <div class="checkbox-item">
+                <label for="aceptar-condiciones">He leído y acepto los términos y condiciones</label>
+                <input type="checkbox" id="aceptar-condiciones" name="aceptar-condiciones" required>
+            </div>
+        </div>
 
 
             <div class="grupo-form">
@@ -210,7 +231,9 @@
 
             <!-- Botón Enviar -->
             <button type="submit">Comprar Entradas</button>
+        
         </form>
+  
     </div>
 
     <footer>
