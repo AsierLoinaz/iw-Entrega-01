@@ -9,7 +9,7 @@
 <body>
     <header>
         <img src="images/logo.png" alt="Logo de Extremoduro" id="logo">
-        <h1>Historia del Grupo</h1>
+        <h1>Comprar entradas</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -104,6 +104,7 @@
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
+                    <i><u>Las entradas en grada no están numeradas</u></i>
                 </div>
                 
                 
@@ -116,9 +117,8 @@
             <fieldset>
             <legend>Datos personales del COMPRADOR</legend>
 
-            <div> 
-                <p> El COMPRADOR será el único que reciba las entradas en PDF por email. Aunque se incluyan datos de asistentes, éstos no recibirán PDF, puesto que el propietario es el titular de la compra.</p>
-            </div>
+            
+         
 
             <!-- Nombre -->
             <div class="grupo-form">
@@ -188,6 +188,8 @@
                 </div>
                 
             </div>
+            <p><i>El <b>COMPRADOR</b> será el único que reciba las entradas en PDF por email. Aunque se incluyan datos de asistentes, éstos no recibirán PDF, puesto que el propietario es el titular de la compra.</i></p>
+
         </fieldset>
     </div>
             <div id="pago" class="f_sect">
@@ -197,7 +199,7 @@
             <div class="grupo-form">
                 <label for="metodo-pago">Método de Pago*:</label>
                 <select id="metodo-pago" name="metodo-pago" required>
-                    <option value="">Selecciona una opción</option>
+                    <option value="" disabled selected>Selecciona un método de pago</option> <!-- Opción predeterminada -->
                     <option value="tarjeta">Tarjeta de Crédito/Débito</option>
                     <option value="paypal">PayPal</option>
                     <option value="transferencia">Transferencia Bancaria</option>

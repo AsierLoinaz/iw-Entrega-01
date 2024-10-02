@@ -6,11 +6,16 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
+header{
     background-color: #c5c5c5;
     color: #333;
     padding: 20px;
     text-align: center;
+    background-image: url("images/robe.png");
+    background-size: cover; /* Escala la imagen para cubrir todo el área disponible */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* La imagen se mantiene fija al hacer scroll */
 }
 
 #logo {
@@ -29,8 +34,12 @@ nav ul li {
     margin: 0 10px;
 }
 
+header h1{
+    color: rgba(255, 255, 255, 0.832);
+}
+
 nav ul li a {
-    color: rgb(64, 64, 64);
+    color: rgba(255, 255, 255, 0.647);
     text-decoration: underline
 }
 
@@ -73,6 +82,7 @@ footer img {
 }
 
 .content {
+    
     border-radius: 12px;
     margin-top: 0px;
     background-color: white;
@@ -94,6 +104,7 @@ footer img {
     width: 400px; 
     height: 400px;
     margin-right: 20px; 
+    border-radius: 4px;
 }
 
 .textoDisco p{
