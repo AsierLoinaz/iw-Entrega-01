@@ -74,13 +74,10 @@ footer img {
     position: sticky; 
     top: 0; /* Se mantendrá pegada a la parte superior al hacer scroll */
     height: 100vh; /* Altura completa de la ventana */
-    overflow-y: initial; /* Puedes hacer scroll en la sidebar  */
-    
-
 }
 .sidebar h2 {
     padding-left: 19px;
-    margin-bottom: 15px; /* Espacio debajo del título */
+    margin-bottom: 10px; /* Espacio debajo del título */
     color: #fd1717eb;
 }
 
@@ -91,7 +88,7 @@ footer img {
 
 .sidebar li{
     padding-left: 0px;
-    padding: 10px;
+    padding: 5px;
     text-align: left;
 }
 
