@@ -1,14 +1,11 @@
 /* Estilos comunes */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 header{
-    background-color: #c5c5c5;
-    color: #333;
     padding: 20px;
     text-align: center;
     background-image: url("images/robe.png");
@@ -18,7 +15,7 @@ header{
     background-attachment: fixed; /* La imagen se mantiene fija al hacer scroll */
 }
 
-#logo {
+#logo{
     width: 20%;
     display: block;
     margin: 0 auto;
@@ -35,23 +32,23 @@ nav ul li {
 }
 
 header h1{
-    color: rgba(255, 255, 255, 0.832);
+    color: rgba(255, 255, 255, 0.907);
 }
 
 nav ul li a {
-    color: rgba(255, 255, 255, 0.647);
+    font-size: large;
+    color: rgba(255, 255, 255, 0.819);
     text-decoration: underline
 }
 
 footer {
-    background-color: #c5c5c5;
+    background-color: #3f3e3e;
     color: white;
     text-align: center;
     padding: 5px;
     position: relative;
     width: 100%;
     bottom:2px;
-    top: 50px;
 }
 
 .social-icons {
@@ -65,33 +62,71 @@ footer img {
     margin: 2px; 
 }
 
-
 .container {
+    background-color: #a9a9a987;
     display: flex; /* Alinear la sidebar y el contenido */
-    margin-top: 20px;
 }
 
 .sidebar {
     width: 200px;
-    background-color: #f4f4f4; 
-    padding: 50px;
+    padding: 20px;
+    padding-right: 0px;
     position: sticky; 
     top: 0; /* Se mantendrá pegada a la parte superior al hacer scroll */
     height: 100vh; /* Altura completa de la ventana */
     overflow-y: initial; /* Puedes hacer scroll en la sidebar  */
+    
+
 }
+.sidebar h2 {
+    padding-left: 19px;
+    margin-bottom: 15px; /* Espacio debajo del título */
+    color: #fd1717eb;
+}
+
+.sidebar ul, .sidebar ol, .sidebar li a{
+    color: #d11e1ecf;
+    text-decoration: none;
+}
+
+.sidebar li{
+    padding-left: 0px;
+    padding: 10px;
+    text-align: left;
+}
+
 
 .content {
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 12px;
-    margin-top: 0px;
-    background-color: white;
+    background-color: rgba(227, 227, 227, 0.577);
     margin-left: 100px; /* Deja espacio para la sidebar */
-    margin-right: 50px;
+    margin-right: 200px;
     padding: 40px; 
     text-align: justify;
+    box-shadow: 0 5px 8px rgba(41, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+
 }
 
+.imgContHist{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.imgHist {
+    padding-bottom: 15px;
+    width: 500px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Hace que la imagen sea un bloque, permitiendo margen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.imgContHist figcaption{
+    font-size: medium;
+    font-weight: 70;
+}
 
 
 .content .infoDisco {
@@ -108,7 +143,6 @@ footer img {
 }
 
 .textoDisco p{
-    padding-right: 20%;
     text-align: justify;
 }
 
@@ -116,19 +150,24 @@ footer img {
     margin-bottom: 5px; 
 }
 
+
 .content .tablasDiscos table {
     table-layout: fixed; /* Ancho de columna fijo */
-    width: 88%; /* Ancho de tablas */
+    width: 100%;
     border-collapse: collapse; /* Sin espacio entre celdas*/
     text-align: left; 
+    background-color: rgba(242, 242, 242, 0.711);
+
 }
 
-.tablasDiscos th, table td {
-    border: 1px solid #ddd;
+.tablasDiscos th, td {
+    border: 1px solid #726666b8;
     padding: 8px;
     text-align: left;
 }
-
+.tablasDiscos td{
+    color: rgb(23, 23, 23);
+}
 
 
 /* FORMULARIO */
@@ -168,6 +207,7 @@ textarea {
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 14px;
+    background-color: #f7f7f793;
 }
 
 textarea {
@@ -176,9 +216,8 @@ textarea {
 }
 
 select {
-
     appearance: none;
-    background-color: #fff;
+    background-color: #f7f7f793;
 }
 
 /* Estilos de los radio buttons */
@@ -192,14 +231,7 @@ select {
 }
 
 /* Estilos para botones */
-button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 15px;
-    border: none;
-    width: 100%;
-    font-size: 16px;
-}
+
 
 .telefono {
     display: flex;
@@ -223,3 +255,27 @@ button[type="submit"] {
 }
 
 
+.comprarEntradasBtn {
+    display: inline-flex; /* Permite alinear el icono y el texto en línea */
+    align-items: center; /* Alinea verticalmente el icono y el texto */
+    background-color: #d11e1e; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 10px; /* Margen alrededor del botón */
+    cursor: pointer;
+}
+.icono {
+    width: 20px; /* Ajusta el tamaño del icono según lo necesites */
+    height: 20px; /* Ajusta la altura del icono */
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.containterBoton{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
