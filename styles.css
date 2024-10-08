@@ -106,6 +106,102 @@ footer img {
 
 }
 
+#Intro{
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(214, 214, 214, 0.541);
+    border-radius: 5px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    font-size: larger;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    box-shadow: 0 5px 8px rgba(41, 0, 0, 0.2);
+}
+
+.linkIndex{
+    text-decoration: none;
+    color: #d11e1e;
+}
+
+#proxConciertos{
+    margin-top: 50px;
+    display: flex;
+    align-items: top;
+    gap: 200px;
+    margin-left: 100px;
+}
+
+
+#TextoGira h3, #TextoGira h2{
+    text-align: center;
+}
+
+#TextoGira{
+    text-align: justify;
+    width: 30%;
+    margin-top: 0px;
+}
+
+#Gira{
+    width: 550px;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+    box-shadow: 0 6px 8px rgba(41, 0, 0, 0.2); 
+}
+
+#TextoGira .comprarEntradasBtn{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#ProximasFechas{
+    margin-top: 30px;
+    text-align: center;
+}
+
+#ProxConTabla{
+    table-layout: fixed; /* Ancho de columna fijo */
+    width: 100%;
+    border-collapse: collapse; /* Sin espacio entre celdas*/
+}
+
+#ProxConTabla th, #ProxConTabla td {
+    border: 1px solid #726666b8;
+    padding: 8px;
+    text-align: center;
+}
+
+
+.comprarEntradasBtn {
+    margin-top: 20px;
+    display: inline-flex; /* Permite alinear el icono y el texto en línea */
+    align-items: center; /* Alinea verticalmente el icono y el texto */
+    background-color: #d11e1e; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 10px; /* Margen alrededor del botón */
+    cursor: pointer;
+}
+.icono {
+    width: 20px; /* Ajusta el tamaño del icono según lo necesites */
+    height: 20px; /* Ajusta la altura del icono */
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.containterBoton{
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+
 .imgContHist{
     padding-top: 20px;
     padding-bottom: 50px;
@@ -249,30 +345,4 @@ select {
     display: flex;
     align-items: center; /* Alinea verticalmente el checkbox y el label */
     gap: 10px;
-}
-
-
-.comprarEntradasBtn {
-    display: inline-flex; /* Permite alinear el icono y el texto en línea */
-    align-items: center; /* Alinea verticalmente el icono y el texto */
-    background-color: #d11e1e; /* Color de fondo del botón */
-    color: white; /* Color del texto */
-    padding: 10px 20px; /* Espaciado dentro del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    font-size: 16px; /* Tamaño de la fuente */
-    margin: 10px; /* Margen alrededor del botón */
-    cursor: pointer;
-}
-.icono {
-    width: 20px; /* Ajusta el tamaño del icono según lo necesites */
-    height: 20px; /* Ajusta la altura del icono */
-    margin-right: 8px; /* Espacio entre el icono y el texto */
-}
-
-.containterBoton{
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
 }
