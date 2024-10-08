@@ -69,14 +69,15 @@ footer img {
 
 .sidebar {
     width: 200px;
-    padding: 20px;
-    padding-right: 0px;
     position: sticky; 
     top: 0; /* Se mantendrá pegada a la parte superior al hacer scroll */
     height: 100vh; /* Altura completa de la ventana */
+    overflow-y: scroll;
+    padding-inline-end: 210px;
+    
 }
 .sidebar h2 {
-    padding-left: 19px;
+    padding-left: 20px;
     margin-bottom: 10px; /* Espacio debajo del título */
     color: #fd1717eb;
 }
@@ -88,10 +89,8 @@ footer img {
 
 .sidebar li{
     padding-left: 0px;
-    padding: 5px;
     text-align: left;
 }
-
 
 .content {
     margin-top: 20px;
@@ -103,7 +102,6 @@ footer img {
     padding: 40px; 
     text-align: justify;
     box-shadow: 0 5px 8px rgba(41, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
-
 }
 
 #Intro{
